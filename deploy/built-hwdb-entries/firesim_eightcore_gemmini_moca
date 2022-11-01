@@ -1,0 +1,4 @@
+firesim_eightcore_gemmini_moca:
+    agfi: agfi-001bd1f383ffdd9ff
+    deploy_triplet_override: null
+    custom_runtime_config: null
