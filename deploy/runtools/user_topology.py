@@ -403,6 +403,16 @@ class UserTopologies:
         assert len(hwdb_entries) == self.no_net_num_nodes
         self.roots = [FireSimServerNode(hwdb_entries[x]) for x in range(self.no_net_num_nodes)]
 
+    def three_no_net_config(self) -> None:
+        hwdb_entries = [
+            "firesim_eightcore_gemmini_moca",
+            "firesim_eightcore_gemmini_moca",
+            "firesim_eightcore_gemmini_moca",
+        ]
+        assert len(hwdb_entries) == self.no_net_num_nodes
+        self.roots = [FireSimServerNode(hwdb_entries[x]) for x in range(self.no_net_num_nodes)]
+
+
 
 #    ######Used only for tutorial purposes####################
 #    def example_sha3hetero_2config(self):
