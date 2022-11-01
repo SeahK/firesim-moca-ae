@@ -184,9 +184,9 @@ for i in range(len(success_ratio)):
 xlabels = ['MoCA','Static Partition']
 c = ['blue', 'orange']
 xticks = ['Low', 'Medium', 'High', 'Total']
-SMALL_SIZE = 8
-MEDIUM_SIZE = 10
-BIGGER_SIZE = 12
+SMALL_SIZE = 10
+MEDIUM_SIZE = 12
+BIGGER_SIZE = 14
 
 
 plt.figure(figsize=(6, 4))
@@ -218,7 +218,7 @@ fig, axs = plt.subplots(1, 3, figsize=(12,4))
 plt.rc('font', size=MEDIUM_SIZE)          # controls default text sizes
 plt.rc('axes', titlesize=MEDIUM_SIZE)     # fontsize of the axes title
 plt.rc('axes', labelsize=MEDIUM_SIZE)    # fontsize of the x and y labels
-plt.rc('xtick', labelsize=MEDIUM_SIZE)    # fontsize of the tick labels
+plt.rc('xtick', labelsize=BIGGER_SIZE)    # fontsize of the tick labels
 plt.rc('ytick', labelsize=BIGGER_SIZE)    # fontsize of the tick labels
 plt.rc('legend', fontsize=MEDIUM_SIZE)    # legend fontsize
 #axis_adjust = 0.7 / (len(x_axis))
@@ -236,7 +236,7 @@ for i in range(len(qos_type)):
     x_adjust = axis_adjust * int(len(this_priority_dict_list)/2)
     for j in range(len(this_priority_dict_list)):
         axs[i].bar(x-axis_adjust*j, this_priority_dict_list[j], width=axis_adjust, label=x_label[j], color=color[j])
-    axs[i].set_xticks(x-axis_adjust/2, x_axis, fontsize=BIGGER_SIZE)
+    axs[i].set_xticks(x-axis_adjust/2, x_axis)#, fontsize=BIGGER_SIZE)
     axs[i].set_xlabel("Priority Level", fontweight='bold', fontsize=BIGGER_SIZE)
     axs[i].set_ylabel("SLA Satisfaction Rate", fontweight='bold', fontsize=BIGGER_SIZE)
     axs[i].set(ylim=(0, 1))
