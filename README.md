@@ -1,4 +1,4 @@
-# FireSim: Easy-to-use, Scalable, FPGA-accelerated Cycle-accurate Hardware Simulation
+# FireSim for HPCA MoCA AE
 
 ![FireSim Documentation Status](https://readthedocs.org/projects/firesim/badge/)
 ![Github Actions Status](https://github.com/firesim/firesim/actions/workflows/firesim-run-tests.yml/badge.svg)
